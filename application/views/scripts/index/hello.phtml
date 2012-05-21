@@ -1,0 +1,19 @@
+<?php 
+//echo("<pre>".print_r($this, 1)."</pre>");
+?>
+
+
+<html>
+<body>
+	<h1>Hello World <?php echo $this->nome; ?></h1>
+	<?php 
+	foreach ($this->array as $elemento):
+	?>
+		<h3> <?php echo $elemento; ?></h3>
+	<?php
+	endforeach;
+	
+	?>
+	
+</body>
+</html>
