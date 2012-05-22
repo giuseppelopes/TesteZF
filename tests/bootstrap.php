@@ -17,6 +17,4 @@ set_include_path(implode(PATH_SEPARATOR, array(
 require_once 'Zend/Loader/Autoloader.php';
 Zend_Loader_Autoloader::getInstance();
 
-echo("<pre>".print_r(get_include_path(), 1)."</pre>");
-
 exit;
