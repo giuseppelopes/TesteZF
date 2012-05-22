@@ -1,10 +1,10 @@
 <?php
+require_once 'bootstrap.php';
+//require_once 'PHPUnit\Framework\TestSuite.php';
 
-require_once 'PHPUnit\Framework\TestSuite.php';
+//require_once 'tests\application\models\Application_Model_ValidatorTest.php';
 
-require_once 'tests\application\models\Application_Model_ValidatorTest.php';
-
-require_once 'tests\application\controllers\IndexControllerTest.php';
+//require_once 'tests\application\controllers\IndexControllerTest.php';
 
 /**
  * Static test suite.
