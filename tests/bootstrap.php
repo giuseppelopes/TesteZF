@@ -3,7 +3,6 @@
 // Define path to application directory
 defined('APPLICATION_PATH')
     || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/../application'));
-echo(APPLICATION_PATH);
 // Define application environment
 defined('APPLICATION_ENV')
     || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'testing'));
@@ -17,6 +16,6 @@ set_include_path(implode(PATH_SEPARATOR, array(
 require_once 'Zend/Loader/Autoloader.php';
 Zend_Loader_Autoloader::getInstance();
 
-echo("<pre>".print_r(APPLICATION_PATH, 1)."</pre>");
+echo("<pre>".print_r(get_include_path(), 1)."</pre>");
 
 exit;
