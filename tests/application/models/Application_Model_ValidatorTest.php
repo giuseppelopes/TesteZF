@@ -1,8 +1,6 @@
 <?php
-
-require_once 'application\models\Validator.php';
-
-require_once 'PHPUnit\Framework\TestCase.php';
+require_once APPLICATION_PATH .  DIRECTORY_SEPARATOR .'models'.  DIRECTORY_SEPARATOR .'Validator.php';
+//require_once 'PHPUnit\Framework\TestCase.php';
 
 /**
  * Application_Model_Validator test case.
