@@ -13,8 +13,8 @@ class IndexController extends Zend_Controller_Action
         // action body
     }
     
-    public function helloAction(){
-    	
+    public function helloAction()
+    {	
     	$arrayTeste = array('teste1', 'teste2', 'teste3');
     	$this->view->assign("nome", "Morvana");
     	$this->view->assign("array", $arrayTeste);
