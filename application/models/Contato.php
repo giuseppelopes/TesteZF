@@ -14,14 +14,9 @@ class Application_Model_Contato extends Zend_Db_Table_Abstract
     	return $this->fetchAll();
     }
     
-    public function gelRecord($idConato){
-    	return $this->fetchRow("idContato = '$idConato'");
-    	
-    	
-    	return $this->find($idConato);
-    	
-    	
-    	
+    public function gelRecord($idConato)
+    {
+    	return $this->fetchRow("idContato = '$idConato'");	
     }
 
 }
