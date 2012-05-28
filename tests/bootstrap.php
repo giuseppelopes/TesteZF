@@ -16,3 +16,27 @@ set_include_path(implode(PATH_SEPARATOR, array(
 
 require_once 'Zend/Loader/Autoloader.php';
 Zend_Loader_Autoloader::getInstance();
+
+/** Zend_Application */
+require_once 'Zend/Application.php';
+
+// Create application, bootstrap, and run
+$application = new Zend_Application(
+		APPLICATION_ENV,
+		APPLICATION_PATH . '/configs/application.ini'
+);
+
+
+$resource = $application->getOption('resources');
+	Zend_Registry::set(
+	'database',
+		new Zend_Db_Adapter_Mysqli(
+			array(
+				'host' => $resource['db']['host'],
+				'dbname' => $resource['db']['base'],
+				'username' => $resource['db']['user'],
+				'password' => $resource['db']['pass'],
+				'charset' => 'utf8'
+			)
+	)
+);
