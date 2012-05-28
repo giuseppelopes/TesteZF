@@ -18,17 +18,13 @@ class Application_Model_ContatoTest extends PHPUnit_Framework_TestCase {
 	 */
 	protected function setUp() {
 		parent::setUp ();
-		
-		// TODO Auto-generated Application_Model_ContatoTest::setUp()
-		
-		$this->Application_Model_Contato = new Application_Model_Contato(/* parameters */);
+		$this->Application_Model_Contato = new Application_Model_Contato();
 	}
 	
 	/**
 	 * Cleans up the environment after running a test.
 	 */
 	protected function tearDown() {
-		// TODO Auto-generated Application_Model_ContatoTest::tearDown()
 		$this->Application_Model_Contato = null;
 		
 		parent::tearDown ();
@@ -46,18 +42,14 @@ class Application_Model_ContatoTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testSetupDatabaseAdapter() {
 		$this->Application_Model_Contato->_setupDatabaseAdapter();
-		
 		$this->assertTrue($this->Application_Model_Contato->getAdapter() instanceof  Zend_Db_Adapter_Abstract);
 	}
 	
 	/**
 	 * Tests Application_Model_Contato->getAll()
 	 */
-	public function testGetAll() {
-		// TODO Auto-generated Application_Model_ContatoTest->testGetAll()
-		$this->markTestIncomplete ( "getAll test not implemented" );
-		
-		$this->Application_Model_Contato->getAll(/* parameters */);
+	public function testGetAllIsRowSet() {
+		$this->assertTrue($this->Application_Model_Contato->getAll() instanceof Zend_Db_Table_Rowset);
 	}
 	
 	/**

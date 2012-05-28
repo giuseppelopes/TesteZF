@@ -9,7 +9,7 @@ class Application_Model_Contato extends Zend_Db_Table_Abstract
         $this->_setAdapter('database');
     }
     
-    public function getAll($where)
+    public function getAll()
     {
     	return $this->fetchAll();
     }
