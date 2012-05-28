@@ -2,7 +2,7 @@
 
 class Application_Model_Contato extends Zend_Db_Table_Abstract
 {
-    protected $_name = 'contato';
+    protected $_name = 'usuario';
     protected $_primary = 'id';
     public function _setupDatabaseAdapter()
     {
