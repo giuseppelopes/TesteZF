@@ -18,5 +18,4 @@ class Application_Model_Contato extends Zend_Db_Table_Abstract
     {
     	return $this->fetchRow("idContato = '$idConato'");	
     }
-
 }
